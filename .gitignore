@@ -1,0 +1,10 @@
+**/__pycache__/
+**.pth
+./output/
+./datasets/
+./weights/
+.vscode/
+*.pyc
+*.pkl
+*.json
+*.log
