@@ -1,8 +1,8 @@
 **/__pycache__/
 **.pth
-./output/
-./datasets/
-./weights/
+output/
+datasets/
+weights/
 .vscode/
 *.pyc
 *.pkl
