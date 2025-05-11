@@ -12,6 +12,7 @@ from dinov2.hub.backbones import dinov2_vits14, dinov2_vitb14, dinov2_vitl14, di
 from detectron2.modeling.backbone import Backbone
 from detectron2.layers import ShapeSpec
 from typing import Dict
+from detectron2.structures import ImageList
 
 class dino_preprocessing():
     """
@@ -102,10 +103,11 @@ class DinoVitFeatureExtractor(Backbone):
     def forward(self, x):
         # the data loading defaults to BGR
         if self.is_BGR:
-            x = torch.stack([img['image'] for img in x], dim=0)[:,[2,1,0],:,:].float()
+            x = [torch.tensor(img['image'])[[2,1,0],:,:].float().to(device=next(self.encoder.parameters()).device) for img in x]
         else:
-            x = torch.stack([img['image'] for img in x], dim=0).float()
-        x = self.preprocessing(x).to(device=next(self.encoder.parameters()).device)
+            x = [torch.tensor(img['image']).float().to(device=next(self.encoder.parameters()).device) for img in x]
+        x = ImageList.from_tensors(x, self.patch_size).tensor
+        x = self.preprocessing(x)
         batch_size, _, height, width = x.size()
         # check image dims divisible by patch_size
         assert (height % self.patch_size) == 0

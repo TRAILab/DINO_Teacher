@@ -98,9 +98,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     # args.gen_labels = True
     args.resume = True
-    args.num_gpus = 1
-    args.opts = ['SEMISUPNET.LABELER_TARGET_PSEUDOGT', 'output/dino_label/test_vitl/predictions/ACDC_val_night_dino_anno_vitl.pkl']
-    args.config_file = './configs/vgg_city2bdd_test.yaml'
     print("Command Line Args:", args)
     url_parts = args.dist_url.rsplit(':',1)
     url_parts[1] = str(randint(0,1000) + int(url_parts[1]))
