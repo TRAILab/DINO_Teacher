@@ -56,16 +56,16 @@ The DINO labellers are all trained on the original Cityscapes only. All results 
 
 |     Backbone     | Cityscapes |  Foggy Cityscapes  |  BDD100k  |  Weights  | Forward Pass Labels |
 |:-:               |:-:         |:-:                 |:-:        |:-:        |:-:                     | 
-| ViT-L            |61.3        |54.6                |45.7       | [link](https://drive.google.com/file/d/1yY2cDnMpVMbTu9cSrYjCJX81mY8n8ZjY/view?usp=drive_link)          | [FCS](https://drive.google.com/file/d/1oc5LIU7OxhFI5Cu2Rm2Uw2mBfqmrIVyF/view?usp=drive_link), [BDD](https://drive.google.com/file/d/1zstBlg-IJWO9SQ2sDwD2GfPi_f2nTylO/view?usp=drive_link) |
-| ViT-G            |64.3        |58.8                |51.1       | [link](https://drive.google.com/file/d/1-ApmCHfQj3fUk9qQ2Er4jTMzzP8Db6Gl/view?usp=drive_link)          | [FCS](https://drive.google.com/file/d/1VVBWFVr57f8llQvI5pRD3qbxG7TZi93v/view?usp=drive_link), [BDD](https://drive.google.com/file/d/1u4evLs6jPbwanVahECJG52hivTFVht10/view?usp=drive_link) |
+| ViT-L            |61.3        |54.6                |45.7       | [link](https://drive.google.com/file/d/1JOq4_uCjBl6nYEB__L54QiL5iXTvn6BA/view?usp=drive_link)          | [FCS](https://drive.google.com/file/d/1oc5LIU7OxhFI5Cu2Rm2Uw2mBfqmrIVyF/view?usp=drive_link), [BDD](https://drive.google.com/file/d/1zstBlg-IJWO9SQ2sDwD2GfPi_f2nTylO/view?usp=drive_link) |
+| ViT-G            |64.3        |58.8                |51.1       | [link](https://drive.google.com/file/d/1nIfAmzIcTf_ZtYWCYDsBanufFM-bdAW4/view?usp=drive_link)          | [FCS](https://drive.google.com/file/d/1VVBWFVr57f8llQvI5pRD3qbxG7TZi93v/view?usp=drive_link), [BDD](https://drive.google.com/file/d/1u4evLs6jPbwanVahECJG52hivTFVht10/view?usp=drive_link) |
 
 ## Student Models
 The student models are trained on the source Cityscapes with ground truth before using the DINO labellers pseudo-labels on the target domain.
 
 | Target Domain    | Backbone | Labeller Size | Align. Teacher | mAP@.50 | Weights | 
 |:-:               |:-:       |:-:            |:-:             |:-:      |:-:      |
-| Foggy Cityscapes | VGG      | ViT-G         | ViT-B          | 55.4    | [link](https://drive.google.com/file/d/1tuKmysCwydrp4-s0CWGIy74FQakQc2ud/view?usp=drive_link)    |
-| BDD100k          | VGG      | ViT-G         | ViT-B          | 47.8    | [link](https://drive.google.com/file/d/17UVfq13Rsj7SkplitT3NsDqP0Gdxr8sa/view?usp=drive_link)         |
+| Foggy Cityscapes | VGG      | ViT-G         | ViT-B          | 55.4    | [link](https://drive.google.com/file/d/1LbJevSZgdMAay576ykcESXQUeoNjrLt6/view?usp=drive_link)    |
+| BDD100k          | VGG      | ViT-G         | ViT-B          | 47.8    | [link]https://drive.google.com/file/d/1EG-ldsKT5VjEck3Ke0uAACwWEOoeWrJe/view?usp=drive_link)         |
 
 ## Citation
 If you use DINO Teacher in your research, please consider citing:
